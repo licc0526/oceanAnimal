@@ -8,7 +8,7 @@ var animal;
 function init() {
 	var canvas = document.getElementById("gameCanvas");
 	context = canvas.getContext("2d");
-	bg = addImg("./g9.jpg");
+	bg = addImg("../img/g9.jpg");
 	setInterval(gameloop, 1000 / 60);
 }
 function gameloop() {
@@ -22,7 +22,7 @@ var animalY = ch - 200;
 var anmalWidth = new Array(50, 50, 50, 50, 50);//62, 54, 52, 45, 40
 var animalHeight = 54;
 drawAnimal(){
-	animal = addImg("../huaji2 .png");
+	animal = addImg("../img/huaji2 .png");
 	context.drawImage(animal, animalX - 45, animalY - 5, 130, 55);
 }
 function clearScreen() {
