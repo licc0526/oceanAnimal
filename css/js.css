@@ -10,15 +10,13 @@ canvas {
 }
 
 img {
-    /* animation: earth_rotate 5s linear 1; */
     animation: earth_bigger 9s linear 1;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-    width: 20%;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1, 1);
 }
 
 #earth {
@@ -100,47 +98,26 @@ img {
     color: lightcoral;
 }
 
-/* @keyframes earth_rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} 
-
- @-webkit-keyframes earth_rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} */
-
 @keyframes earth_bigger {
     0% {
-        width: 20%;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(1, 1) rotate(0deg);
     }
     50% {
-        width: 50%;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(2, 2) rotate(720deg);
         opacity: 1;
         filter: alpha(opacity=100);
     }
     100% {
-        width: 80%;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(3, 3) rotate(1440deg);
         opacity: 0;
         filter: alpha(opacity=0);
     }
